@@ -28,8 +28,16 @@ open class InputSignalTracker: SignalTracker {
     }
   }
 
-  open var peakLevel:Float = signalPeakLevel
-  open var averageLevel:Float = signalAverageLevel
+    open var peakLevel:Float {
+        get {
+            return audioChannel?.peakHoldLevel ?? 0.0
+        }
+    }
+    open var averageLevel:Float {
+        get {
+            return audioChannel?.averagePowerLevel ?? 0.0
+        }
+    }
 
   // MARK: - Initialization
 
