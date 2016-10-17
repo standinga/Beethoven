@@ -39,6 +39,8 @@ open class PitchEngine {
     }
   }
 
+    signal
+    
   open var signalPeakLevel: Float {
     get {
     return self.signalTracker.peakLevel
