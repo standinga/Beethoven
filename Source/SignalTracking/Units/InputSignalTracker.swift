@@ -28,6 +28,9 @@ open class InputSignalTracker: SignalTracker {
     }
   }
 
+  open var peakLevel:Float = signalPeakLevel
+  open var averageLevel:Float = signalAverageLevel
+
   // MARK: - Initialization
 
   public required init(bufferSize: AVAudioFrameCount = 2048, delegate: SignalTrackerDelegate? = nil) {

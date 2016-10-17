@@ -39,6 +39,18 @@ open class PitchEngine {
     }
   }
 
+  open var signalPeakLevel: Float {
+    get {
+    return self.signalTracker.peakLevel
+    }
+  }
+
+  open var signalAverageLevel: Float {
+    get {
+    return self.signalTracker.averageLevel
+    }
+  }
+
   // MARK: - Initialization
 
   public init(config: Config = Config(), delegate: PitchEngineDelegate? = nil) {

@@ -6,6 +6,8 @@ open class OutputSignalTracker: SignalTracker {
   open let audioURL: URL
   open weak var delegate: SignalTrackerDelegate?
   open var levelThreshold: Float?
+  open var peakLevel:Float = 0.0
+  open var averageLevel:Float = 0.0
 
   fileprivate var audioEngine: AVAudioEngine!
   fileprivate var audioPlayer: AVAudioPlayerNode!
